@@ -140,10 +140,10 @@ endif
 # Execute the app_name Python application integration and unit tests
 test:
 ifeq ($(IN_DOCKER),true)
-	$(call log_info,$(LOGGER_NAME),Running the app_name integration and unit tests...)
+	$(call log_info,$(LOGGER_NAME),Executing the app_name integration and unit tests...)
 	@python -m coverage run -m pytest -v
 	@rm -rf .pytest_cache
-	$(call log_done,$(LOGGER_NAME),Tests completed successfully!)
+	$(call log_done,$(LOGGER_NAME),Tests execution completed successfully!)
 else
 	$(call log_error,$(LOGGER_NAME),This Makefile target is meant to be executed only inside a Docker container! Make any of '$(AVAILABLE_MAKEFILE_TARGETS)' targets first.)
 endif
