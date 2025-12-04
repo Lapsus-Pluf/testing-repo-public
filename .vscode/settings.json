@@ -1,5 +1,20 @@
 {
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.args": ["--line-length", "120"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "modificationsIfAvailable"
+  "isort.args": [
+    "--include-trailing-comma",
+    "true",
+    "--line-length",
+    "120",
+    "--profile",
+    "black"
+  ],
+  "flake8.args": ["--max-line-length", "120"]
 }

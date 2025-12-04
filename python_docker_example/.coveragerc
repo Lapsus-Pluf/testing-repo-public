@@ -1,0 +1,10 @@
+[html]
+directory = coverage_html_report
+
+[report]
+# skip_covered = true
+show_missing = true
+
+[run]
+branch = true
+source = src/app_name

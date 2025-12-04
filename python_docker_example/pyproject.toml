@@ -1,0 +1,26 @@
+[project]
+dependencies = ["pydantic", "pydantic_settings"]
+description = "Project example to show how to Docker~ize a Python project"
+name = "app_name"
+requires-python = ">=3.13.5"
+version = "1.0.0"
+
+[project.optional-dependencies]
+dev = ["black", "coverage", "debugpy", "flake8", "isort", "pytest"]
+
+[project.scripts]
+app_name = "app_name.main:main"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 120
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "-v --maxfail=1"
+# addopts = "-v --maxfail=1 --disable-warnings"
+pythonpath = "src"
+testpaths = "tests"
